@@ -1,6 +1,6 @@
 {"af-ac-enc-dat": "YWNzCjAwNABWR3XEutlo+IwBAAABAgEAkAAAADtPDeHiy32wnfrXx+UBvRRs34H/XsQa02pkusJ8PYndBEQ+oj+TbEafJ4Nx+kn/TTu/MF9/W9PwH0/WFpB9VCdMgrkRYHvgxE7lAqwE90aXAdcWTNRZs9QT4G/9wELuZaLcUcUR36wQC+qMiAhBCxq5zhRqqR+U0fOVSkqJsRiKPPhVN0OkKvaTZt0ES1PrWg==",
   "Cookie":  "SPC_CLIENTID=QkUxMjlCMjkyNjdFvtfxvgmupngosgua;shopee_app_version=31626; shopee_rn_bundle_version=6000001;shopee_rn_version=1703153668;",
   "max_product_per_page": 400,
-  "number_of_page_per_category": 1,
+  "number_of_page_per_category": 10,
   "data_folder": "../data/shopee_data.xlsx"
 }

@@ -33,18 +33,19 @@ class ScraperPipeLine:
     def process_item(self, item, spider):
         """ITEM PROCESS HERE"""
         items = item['data']['sections'][0]['data']['item']
-        for each_item in items:
-            shop_id = each_item['itemid']
-            product_id = each_item['shopid']
-            product = {}
-            product['product_name'] = each_item['name']
-            product['product_url'] = "https://shopee.vn/" + self.convert_to_sku(input_string=each_item['name'],
-                                                                                shop_id=shop_id,
-                                                                                prod_id=product_id)
-            product['product_rating'] = each_item['item_rating']['rating_star']
-            product['product_price'] = each_item['price']
-            product['product_revenue'] = int(each_item['price']) * int(each_item['historical_sold'])
-            spider.total_data.append(product)
+        if items is not None:
+            for each_item in items:
+                shop_id = each_item['itemid']
+                product_id = each_item['shopid']
+                product = {}
+                product['product_name'] = each_item['name']
+                product['product_url'] = "https://shopee.vn/" + self.convert_to_sku(input_string=each_item['name'],
+                                                                                    shop_id=shop_id,
+                                                                                    prod_id=product_id)
+                product['product_rating'] = each_item['item_rating']['rating_star']
+                product['product_price'] = each_item['price']
+                product['product_revenue'] = int(each_item['price']) * int(each_item['historical_sold'])
+                spider.total_data.append(product)
 
     def close_spider(self, spider):
         """CLOSE CRAWLER WHEN ITEM IS DONE"""
