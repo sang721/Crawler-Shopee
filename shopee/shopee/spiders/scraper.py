@@ -18,7 +18,7 @@ class Scraper(scrapy.Spider):
 
         """
         url = 'https://mall.shopee.vn/api/v4/official_shop/get_categories_and_mall_shops'
-        yield Request(url=url, headers=self.headers, callback=self.get_all_categories)
+        yield Request(url=url, headers=self.headers, callback=self.test_1)
 
     def test_1(self, response):
         """
